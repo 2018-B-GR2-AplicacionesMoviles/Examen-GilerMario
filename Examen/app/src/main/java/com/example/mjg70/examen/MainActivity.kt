@@ -10,17 +10,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        btnIngresar.setOnClickListener { ingresarMedicina() }
-        btnConsultar.setOnClickListener { consultarMedicina() }
+        btnEntrar.setOnClickListener { ingresarUsuario() }
     }
 
-    fun ingresarMedicina(){
-        val intentIngresarMedicina= Intent(this, IngresarActivity::class.java)
-        startActivity(intentIngresarMedicina)
-    }
-
-    fun consultarMedicina(){
-        val intentConsultarMedicina = Intent(this, ConsultarActivity::class.java)
-        startActivity(intentConsultarMedicina)
+    fun ingresarUsuario(){
+        BDEquipoFutbol.guardarUsuario(txtNombre.text.toString())
+        val intentMenu = Intent(this, MenuActivity::class.java)
+        intentMenu.putExtra("usuario", txtNombre.text.toString())
+        startActivity(intentMenu)
     }
 }

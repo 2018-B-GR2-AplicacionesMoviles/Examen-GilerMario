@@ -12,62 +12,63 @@
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/txtCodigoMed" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtNombreMed"
-            app:layout_constraintEnd_toEndOf="@+id/txtNombreMed"
-            app:layout_constraintStart_toStartOf="@+id/txtNombreMed" android:layout_marginStart="3dp"
-            android:hint="Codigo Medicina"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/txtPrecio" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtCodigoMed"
-            app:layout_constraintStart_toStartOf="@+id/txtCodigoMed"
-            app:layout_constraintEnd_toEndOf="@+id/txtCodigoMed" android:hint="Precio Medicina"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/txtObservacionMed" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtPrecio"
-            app:layout_constraintStart_toStartOf="@+id/txtPrecio" app:layout_constraintEnd_toEndOf="@+id/txtPrecio"
-            android:hint="Observacion Medicina"/>
-    <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/txtDosisMed" android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@+id/txtObservacionMed"
-            app:layout_constraintStart_toStartOf="@+id/txtObservacionMed"
-            app:layout_constraintEnd_toEndOf="@+id/txtObservacionMed" android:hint="Dosis Medicina"/>
+            android:id="@+id/txtLiga" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtNombre"
+            app:layout_constraintEnd_toEndOf="@+id/txtNombre"
+            app:layout_constraintStart_toStartOf="@+id/txtNombre" android:layout_marginStart="3dp"
+            android:hint="Liga" app:layout_constraintHorizontal_bias="1.0"/>
     <Button
             android:text="Aceptar"
             android:layout_width="92dp"
             android:layout_height="wrap_content"
-            android:id="@+id/btnAceptar" app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
-            android:layout_marginEnd="56dp" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="1.0"
-            android:layout_marginBottom="40dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtDosisMed"/>
+            android:id="@+id/btnAceptar"
+            app:layout_constraintStart_toStartOf="@+id/txtCampeonActual"
+            app:layout_constraintEnd_toEndOf="@+id/txtCampeonActual" android:layout_marginTop="104dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtCampeonActual" app:layout_constraintHorizontal_bias="0.512"/>
     <Button
             android:text="Cancelar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnCancelar" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="64dp"
-            android:layout_marginBottom="49dp" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtDosisMed"
-            app:layout_constraintVertical_bias="0.536"/>
+            android:id="@+id/btnCancelar"
+            app:layout_constraintStart_toStartOf="@+id/btnAceptar"
+            app:layout_constraintEnd_toEndOf="@+id/btnAceptar" android:layout_marginTop="36dp"
+            app:layout_constraintTop_toBottomOf="@+id/btnAceptar"/>
     <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/txtNombreMed" android:layout_marginTop="8dp"
+            android:id="@+id/txtNombre" android:layout_marginTop="40dp"
             app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginStart="8dp"
-            app:layout_constraintStart_toStartOf="parent" android:hint="Nombre Medicina"/>
+            app:layout_constraintStart_toStartOf="parent" android:hint="Nombre"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/txtNumCopInter"
+            android:hint="Número de Copas Internacionales"
+            app:layout_constraintStart_toStartOf="@+id/txtFechaCreacion"
+            app:layout_constraintEnd_toEndOf="@+id/txtFechaCreacion"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtFechaCreacion"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtCampeonActual"
+            app:layout_constraintStart_toStartOf="@+id/txtNumCopInter"
+            app:layout_constraintEnd_toEndOf="@+id/txtNumCopInter"
+            app:layout_constraintTop_toBottomOf="@+id/txtNumCopInter" android:hint="Campeón Actual"
+            app:layout_constraintHorizontal_bias="0.0" android:layout_marginTop="4dp"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtFechaCreacion"
+            app:layout_constraintStart_toStartOf="@+id/txtLiga" app:layout_constraintEnd_toEndOf="@+id/txtLiga"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/txtLiga"
+            android:hint="Fecha Creación"/>
 </android.support.constraint.ConstraintLayout>
